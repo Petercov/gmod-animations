@@ -205,3 +205,5 @@ $sequence walk_suitcase {
 	loop activity ACT_HL2MP_WALK_SUITCASE 1
 	addlayer body_rot_z
 }
+
+$IncludeModel "player/dewobedil/mmd/custom_animation_male.mdl"

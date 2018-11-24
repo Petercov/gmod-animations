@@ -1,4 +1,4 @@
-$modelname m_anm.mdl
+$modelname player/m_anm.mdl
 
 $definevariable g "base_m" // this defines the gender for some animations
 

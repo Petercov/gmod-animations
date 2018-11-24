@@ -1,4 +1,4 @@
-$modelname z_anm.mdl
+$modelname player/z_anm.mdl
 
 $definevariable g "base_m" // zombie gender is male
 
