@@ -218,6 +218,8 @@ $sequence range_fists_l {
 	fadeout 0.2
 }
 
+$popd
+
 $Sequence "deploy" {
 	"police_xsi\deploy.smd"
 	activity "ACT_METROPOLICE_DEPLOY_MANHACK" 1
