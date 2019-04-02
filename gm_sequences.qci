@@ -234,6 +234,8 @@ $Sequence "deploy" {
 	ikrule "lhand" release
 }
 
+$pushd "player"
+
 // ------------------------------------
 //  TRANSITION SEQUENCES
 // ------------------------------------
