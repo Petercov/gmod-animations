@@ -218,6 +218,20 @@ $sequence range_fists_l {
 	fadeout 0.2
 }
 
+$Sequence "deploy" {
+	"police_xsi\deploy.smd"
+	activity "ACT_METROPOLICE_DEPLOY_MANHACK" 1
+	{ event AE_METROPOLICE_START_DEPLOY 10 "" }
+	{ event AE_METROPOLICE_DEPLOY_MANHACK 33 "" }
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lfoot" footstep
+	ikrule "rfoot" footstep
+	ikrule "rhand" release
+	ikrule "lhand" release
+}
+
 // ------------------------------------
 //  TRANSITION SEQUENCES
 // ------------------------------------
