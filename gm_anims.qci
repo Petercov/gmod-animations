@@ -277,6 +277,3 @@ $sequence drive_jeep { drive_jeep_left drive_jeep_center drive_jeep_right
                        blendwidth 3 blend vehicle_steer -1 1 ACT_DRIVE_JEEP 1 }
 
 $origin 0 0 0
-
-$IncludeModel "player/wiltos/anim_base.mdl"
-$IncludeModel "player/bmdm_male_anims.mdl"

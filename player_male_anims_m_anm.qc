@@ -28,6 +28,9 @@ $include gm_sequences_zombie_humans.qci
 
 $include "player/body_poses_lean.qci" // pose parameters e.g. head_rot, body_yaw...
 
+$IncludeModel "player/wiltos/anim_base.mdl"
+$IncludeModel "player/bmdm_male_anims.mdl"
+
 // Optimization commands
 
 $animblocksize 32

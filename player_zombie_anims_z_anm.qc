@@ -113,6 +113,9 @@ $include gm_sequences_zombie.qci
 
 $include "player/body_poses_lean.qci" // pose parameters e.g. head_rot, body_yaw...
 
+$IncludeModel "player/wiltos/anim_base.mdl"
+$IncludeModel "player/bmdm_male_anims.mdl"
+
 $animblocksize 32
 
 $BoneSaveFrame "ValveBiped.Bip01_L_Thigh" rotation
