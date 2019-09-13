@@ -33,7 +33,7 @@ $IncludeModel "player/bmdm_male_anims.mdl"
 
 // Optimization commands
 
-$animblocksize 32
+//$animblocksize 32
 
 $BoneSaveFrame "ValveBiped.Bip01_L_Thigh" rotation
 $BoneSaveFrame "ValveBiped.Bip01_L_Calf" rotation

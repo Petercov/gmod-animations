@@ -191,3 +191,5 @@ $sequence walk_suitcase {
 }
 
 $IncludeModel "player/dewobedil/mmd/custom_animation_female.mdl"
+$IncludeModel "humans/female_gestures.mdl"
+$IncludeModel "alyx_gestures.mdl"
