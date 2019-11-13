@@ -115,6 +115,7 @@ $include "player/body_poses_lean.qci" // pose parameters e.g. head_rot, body_yaw
 
 $IncludeModel "player/wiltos/anim_base.mdl"
 $IncludeModel "player/bmdm_male_anims.mdl"
+$IncludeModel "player/male_anims.mdl"
 
 //$animblocksize 32
 
