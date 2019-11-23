@@ -260,20 +260,93 @@ $sequence sit_rollercoaster { sit_rollercoaster_fall sit_rollercoaster_idle sit_
 
 $origin 0 9.4 -0.7 // XSI offset, positions the player perfectly in the vehicle 0 9.4 -0.7
 
-$animation drive_airboat_left "../gmod/drive_airboat_left" { loop LX LY rotateto -1 }
-$animation drive_airboat_right "../gmod/drive_airboat_right" { loop LX LY rotateto 1 }
-$animation drive_airboat_center "../gmod/drive_airboat" { loop LX LY rotateto 1 }
+$animation drive_airboat_left "../gmod/drive_airboat_left" { loop LX LY rotateto -1 ikrule "lhand" attachment "Steering_LHand" ikrule "rhand" attachment "Steering_RHand"}
+$animation drive_airboat_right "../gmod/drive_airboat_right" { loop LX LY rotateto 1 ikrule "lhand" attachment "Steering_LHand" ikrule "rhand" attachment "Steering_RHand"}
+$animation drive_airboat_center "../gmod/drive_airboat" { loop LX LY rotateto 1 ikrule "lhand" attachment "Steering_LHand" ikrule "rhand" attachment "Steering_RHand"}
 
 $sequence drive_airboat { drive_airboat_left drive_airboat_center drive_airboat_right
                           blendwidth 3 blend vehicle_steer -1 1 ACT_DRIVE_AIRBOAT 1 }
  
 $origin 0 8.5 -4 // XSI offset, positions the player perfectly in the vehicle 0 8.5 -4
 
-$animation drive_jeep_left "../gmod/drive_jeep_left" { loop LX LY rotateto -1 }
-$animation drive_jeep_right "../gmod/drive_jeep_right" { loop LX LY rotateto 1 }
-$animation drive_jeep_center "../gmod/drive_jeep" { loop LX LY rotateto 1 }
+$animation drive_jeep_left "../gmod/drive_jeep_left" { loop LX LY rotateto -1 ikrule "lhand" attachment "Steering_LHand" ikrule "rhand" attachment "Steering_RHand"}
+$animation drive_jeep_right "../gmod/drive_jeep_right" { loop LX LY rotateto 1 ikrule "lhand" attachment "Steering_LHand" ikrule "rhand" attachment "Steering_RHand"}
+$animation drive_jeep_center "../gmod/drive_jeep" { loop LX LY rotateto 1 ikrule "lhand" attachment "Steering_LHand" ikrule "rhand" attachment "Steering_RHand"}
 
 $sequence drive_jeep { drive_jeep_left drive_jeep_center drive_jeep_right
                        blendwidth 3 blend vehicle_steer -1 1 ACT_DRIVE_JEEP 1 }
 
 $origin 0 0 0
+
+$Animation "Man_Gun_neutral" ..\$g$\Man_Gun_neutral.smd {
+	fps 30
+}
+
+$Animation "Man_Gun_down_left" ..\$g$\Man_Gun_down_left.smd {
+	fps 30
+}
+
+$Animation "Man_Gun_down_center" ..\$g$\Man_Gun_down_center.smd {
+	fps 30
+}
+
+$Animation "Man_Gun_down_right" ..\$g$\Man_Gun_down_right.smd {
+	fps 30
+}
+
+$Animation "Man_Gun_mid_left" ..\$g$\Man_Gun_mid_left.smd {
+	fps 30
+}
+
+$Animation "Man_Gun_mid_center" ..\$g$\Man_Gun_mid_center.smd {
+	fps 30
+}
+
+$Animation "Man_Gun_mid_right" ..\$g$\Man_Gun_mid_right.smd {
+	fps 30
+}
+
+$Animation "Man_Gun_up_left" ..\$g$\Man_Gun_up_left.smd {
+	fps 30
+}
+
+$Animation "Man_Gun_up_center" ..\$g$\Man_Gun_up_center.smd {
+	fps 30
+}
+
+$Animation "Man_Gun_up_right" ..\$g$\Man_Gun_up_right.smd {
+	fps 30
+}
+
+$Sequence "Man_Gun_Aim_all" {
+	"Man_Gun_up_right"
+	"Man_Gun_up_center"
+	"Man_Gun_up_left"
+	"Man_Gun_mid_right"
+	"Man_Gun_mid_center"
+	"Man_Gun_mid_left"
+	"Man_Gun_down_right"
+	"Man_Gun_down_center"
+	"Man_Gun_down_left"
+	blend "aim_yaw" -60 60
+	blend "aim_pitch" -35 50
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$Sequence "Man_Gun" {
+	..\$g$\Man_Gun.smd
+	activity "ACT_HL2MP_IDLE_MANNEDGUN" 1
+	fadein 0.2
+	fadeout 0.2
+	addlayer "Man_Gun_Aim_all"
+	fps 30
+	loop
+	ikrule "lhand" attachment "L_hand" contact 0 fakeorigin 13.44 4.2 43.62 fakerotate 0.23 -0.37 -0.54 floor 0 height 0 radius 10 range 0 0 59 59 target 1
+	ikrule "rhand" attachment "R_hand" contact 0 fakeorigin 15.76 -7.07 45.24 fakerotate -3.09 0 0.44 floor 0 height 0 radius 10 range 0 0 59 59 target 0
+}
+
+$MakeSit	sit_man_gun	 ..\$g$\Man_Gun.smd 0 Man_Gun_Aim_all activity "ACT_HL2MP_SIT_MANNEDGUN" 1 ikrule "lhand" attachment "L_hand" ikrule "rhand" attachment "R_hand"
+
