@@ -234,6 +234,21 @@ $Sequence "deploy" {
 	ikrule "lhand" release
 }
 
+$Sequence "Dropship_Deploy" {
+	"combine_soldier_xsi\Dropship_Deploy.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 80 80 target 0 usesequence 
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 80 80 target 1 usesequence 
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 80 80 target 2 usesequence 
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 80 80 target 3 usesequence 
+	walkframe 12 LX LY LZ
+	walkframe 34 LX LY LZ
+	walkframe 60 LX LY LZ
+	walkframe 72 LX LY LZ
+}
+
 $pushd "player"
 
 // ------------------------------------
